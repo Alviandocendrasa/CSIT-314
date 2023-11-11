@@ -27,24 +27,31 @@ const theme = createTheme({
 const App = () => {
   const location = useLocation();
   const dispatch = useDispatch();
-  
-  useEffect(()=>{
-      dispatch(removeMessage());
-  },[location])
+
+  useEffect(() => {
+    dispatch(removeMessage());
+  }, [location])
+
+  useEffect(() => {
+
+
+    console.log('test here 1111', process.env.NODE_ENV)
+  }, [])
+
 
   return (
     <ThemeProvider theme={theme}>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <Navbar />
         <Routes>
-          <Route path="/login"  element ={ <LoginPage />} />
-          <Route path="/register"  element ={ <RegisterPage />} />
-          <Route path="/workslots"  element ={ <WorkSlotsPage />} />
-          <Route path="/workslot/new"  element ={ <WorkSlotNewPage />} />
-          <Route path="/profile"  element ={ <ProfilePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/workslots" element={<WorkSlotsPage />} />
+          <Route path="/workslot/new" element={<WorkSlotNewPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </LocalizationProvider>
-    </ThemeProvider>      
+    </ThemeProvider>
   )
 };
 
