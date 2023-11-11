@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     ["/api/*"],
     createProxyMiddleware({
-      target: "https://csit-314-production.up.railway.app",
+      target: "http://localhost:3140",
     })
   );
 };
