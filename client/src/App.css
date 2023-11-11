@@ -1,0 +1,42 @@
+a {
+  color: inherit; 
+  text-decoration: inherit;
+}
+
+.container {
+  background-color: white;
+  min-height: 100vh;
+}
+
+.paper {
+  width: max-content;
+  margin: 40px 0px;
+}
+
+.form-page {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.login-form {
+    padding: 64px;
+}
+
+.register-form {
+  padding: 32px;
+}
+
+.list-page {
+  display: flex;
+}
+
+.profile {
+  text-align: left;
+  padding: 32px;
+}
+
+.profile-group {
+  display: flex;
+}
